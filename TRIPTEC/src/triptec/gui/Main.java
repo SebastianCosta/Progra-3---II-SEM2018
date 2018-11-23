@@ -5,6 +5,7 @@
  */
 package triptec.gui;
 
+import triptec.logic.ClientManager;
 import triptec.logic.TouristSiteManager;
 
 
@@ -12,6 +13,8 @@ public class Main {
     public static void main(String[] args){
         MainWindow mainW = new MainWindow();
         TouristSiteManager TSManager = new TouristSiteManager();
+        ClientManager clients = new ClientManager();
+        mainW.setClients(clients);
         mainW.setTouristsites(TSManager);
         
         mainW.setVisible(true);

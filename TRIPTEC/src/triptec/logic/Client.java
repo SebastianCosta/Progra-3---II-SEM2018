@@ -57,7 +57,7 @@ public class Client {
         this.places = places;
     }
 
-    public Client(int ID, int PhoneNumber, String name, String email, String birthdate, ControladorGrafo places) {
+    public Client(int ID, int PhoneNumber, String name, String email, String birthdate) {
         this.ID = ID;
         this.PhoneNumber = PhoneNumber;
         this.name = name;

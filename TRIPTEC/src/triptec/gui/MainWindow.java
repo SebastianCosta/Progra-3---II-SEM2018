@@ -5,6 +5,7 @@
  */
 package triptec.gui;
 
+import triptec.logic.ClientManager;
 import triptec.logic.TouristSiteManager;
 
 /**
@@ -12,8 +13,19 @@ import triptec.logic.TouristSiteManager;
  * @author sebas
  */
 public class MainWindow extends javax.swing.JFrame {
-     private TouristSiteManager touristsites;   
+     private TouristSiteManager touristsites; 
+     private ClientManager clients;
 
+    public ClientManager getClients() {
+        return clients;
+    }
+
+    public void setClients(ClientManager clients) {
+        this.clients = clients;
+    }
+
+     
+     
     public TouristSiteManager getTouristsites() {
         return touristsites;
     }
@@ -64,9 +76,19 @@ public class MainWindow extends javax.swing.JFrame {
 
         jButtonCreateRoute.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButtonCreateRoute.setText("Create route for the Official Tour ");
+        jButtonCreateRoute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCreateRouteActionPerformed(evt);
+            }
+        });
 
         jButtonSignIn.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButtonSignIn.setText("Sign in (Client)");
+        jButtonSignIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSignInActionPerformed(evt);
+            }
+        });
 
         jButtonCreateClientRoute.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButtonCreateClientRoute.setText("Create Client's route");
@@ -121,6 +143,18 @@ public class MainWindow extends javax.swing.JFrame {
         winTSM.setVisible(true);
         winTSM.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
     }//GEN-LAST:event_jButtonManageTouristicSitesActionPerformed
+
+    private void jButtonCreateRouteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateRouteActionPerformed
+        CreateRouteWindow winCRT = new CreateRouteWindow(this, rootPaneCheckingEnabled, this);
+         winCRT.setVisible(true);
+         winCRT.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+    }//GEN-LAST:event_jButtonCreateRouteActionPerformed
+
+    private void jButtonSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSignInActionPerformed
+        SignInClienteWindow winSIC = new SignInClienteWindow (this, rootPaneCheckingEnabled, this);
+        winSIC .setVisible(true);
+        winSIC .setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+    }//GEN-LAST:event_jButtonSignInActionPerformed
 
   
 
