@@ -1,4 +1,4 @@
-package com.structures.graph;
+package triptec.structures;
 
 import java.util.*;
 

@@ -1,7 +1,7 @@
-package com.structures.graph;
+package triptec.structures;
 
 /**
- * Los vértices del Dijkstra son sus nodos de informaciÃ³n, por lo que estos
+ * Los vï¿½rtices del Dijkstra son sus nodos de informaciÃ³n, por lo que estos
  * pueden generar dependencia con otros objetos que se deseen ubicar al grafo.
  *
  * @param <objetoGenerico>
@@ -39,7 +39,7 @@ public class Vertice<objetoGenerico> {
          */
 	public String toString() {
 		String msj = "";
-		msj += "Vértice: ID:" + id_vertice + " ";
+		msj += "Vï¿½rtice: ID:" + id_vertice + " ";
 		msj += nodoInterno.toString();
 		return msj;
 	}

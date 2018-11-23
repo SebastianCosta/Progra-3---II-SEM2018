@@ -1,6 +1,6 @@
 package triptec.structures;
 
-import com.structures.graph.Vertice;
+import triptec.structures.Vertice;
 
 /**
  * Esta clase posee el comportamiento que tendrá el Dijkstra en el momento de
