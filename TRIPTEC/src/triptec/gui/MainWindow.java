@@ -92,9 +92,19 @@ public class MainWindow extends javax.swing.JFrame {
 
         jButtonCreateClientRoute.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButtonCreateClientRoute.setText("Create Client's route");
+        jButtonCreateClientRoute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCreateClientRouteActionPerformed(evt);
+            }
+        });
 
         jButtonShortestPath.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButtonShortestPath.setText("Shortest Path recommendation");
+        jButtonShortestPath.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonShortestPathActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -155,6 +165,18 @@ public class MainWindow extends javax.swing.JFrame {
         winSIC .setVisible(true);
         winSIC .setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
     }//GEN-LAST:event_jButtonSignInActionPerformed
+
+    private void jButtonCreateClientRouteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCreateClientRouteActionPerformed
+       ClientRouteWindow winCR = new ClientRouteWindow(this, rootPaneCheckingEnabled, this);
+       winCR.setVisible(true);
+       winCR.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+    }//GEN-LAST:event_jButtonCreateClientRouteActionPerformed
+
+    private void jButtonShortestPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonShortestPathActionPerformed
+      ShortestPathWindow winSPR = new ShortestPathWindow(this, rootPaneCheckingEnabled, this);
+      winSPR.setVisible(true);
+      winSPR.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+    }//GEN-LAST:event_jButtonShortestPathActionPerformed
 
   
 

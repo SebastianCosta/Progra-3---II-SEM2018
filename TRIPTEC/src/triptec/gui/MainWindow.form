@@ -116,6 +116,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Create Client&apos;s route"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCreateClientRouteActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonShortestPath">
       <Properties>
@@ -124,6 +127,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Shortest Path recommendation"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonShortestPathActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
