@@ -5,6 +5,8 @@
  */
 package triptec.gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author sebas
@@ -48,6 +50,8 @@ public class TouristSitesManagerWindow extends javax.swing.JDialog {
         jButtonDeleteTS = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButtonAddLatLon = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jTextFieldID = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -74,6 +78,11 @@ public class TouristSitesManagerWindow extends javax.swing.JDialog {
         jButtonEditTouristSite.setText("Edit Tourist Site");
 
         jButtonDeleteTS.setText("Delete Tourist Site");
+        jButtonDeleteTS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeleteTSActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setText("Create tour sites");
@@ -85,6 +94,8 @@ public class TouristSitesManagerWindow extends javax.swing.JDialog {
             }
         });
 
+        jLabel2.setText("Enter the name of the Place:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -94,10 +105,18 @@ public class TouristSitesManagerWindow extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonEditTouristSite)
-                            .addComponent(jButtonDeleteTS)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(jButtonEditTouristSite))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonDeleteTS)
+                                    .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(101, 101, 101)
                         .addComponent(jButtonAddLatLon)
@@ -106,7 +125,7 @@ public class TouristSitesManagerWindow extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(263, 263, 263)
                         .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,9 +141,13 @@ public class TouristSitesManagerWindow extends javax.swing.JDialog {
                         .addGap(33, 33, 33)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(226, 226, 226)
+                        .addGap(206, 206, 206)
                         .addComponent(jButtonEditTouristSite)
-                        .addGap(54, 54, 54)
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonDeleteTS)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -145,6 +168,19 @@ public class TouristSitesManagerWindow extends javax.swing.JDialog {
        addAddress.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
     }//GEN-LAST:event_jButtonAddwithAddressActionPerformed
 
+   
+    
+    
+    private void jButtonDeleteTSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteTSActionPerformed
+        try{
+            String ID =this.jTextFieldID.getText();
+            //mainWindow.getTouristsites().getGraph()
+           
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(this, "Couldn't find the location");
+        }
+    }//GEN-LAST:event_jButtonDeleteTSActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAddLatLon;
@@ -152,7 +188,9 @@ public class TouristSitesManagerWindow extends javax.swing.JDialog {
     private javax.swing.JButton jButtonDeleteTS;
     private javax.swing.JButton jButtonEditTouristSite;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextFieldID;
     // End of variables declaration//GEN-END:variables
 }

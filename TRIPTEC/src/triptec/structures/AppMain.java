@@ -2,7 +2,7 @@ package triptec.structures;
 
 
 public class AppMain {
-	private static ControladorGrafo controlador;
+	/**private static ControladorGrafo controlador;
 	private static Grafo grafo;
 	private static Dijkstra dijkstra;
 
@@ -54,5 +54,5 @@ public class AppMain {
 		//Obtener la distancia entre dos v�rtices
 		double distanciaMinima = dijkstra.getDistancias().get(dijkstra.getVertices().get(3));
 		System.out.println(distanciaMinima);
-	}
+	}*/
 }
